@@ -106,3 +106,4 @@ ENV/
 # Static assets
 web/static
 
+.env
