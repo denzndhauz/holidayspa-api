@@ -1,1 +1,1 @@
-web: python manage.py runserver 0.0.0.0:80
+api: python manage.py runserver 0.0.0.0:80
