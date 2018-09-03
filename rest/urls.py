@@ -21,7 +21,6 @@ oauth2_endpoint_views = [
 
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^auth/', include(oauth2_endpoint_views, None)),
+    url(r'^', include(router.urls)),
 ]
