@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dry_rest_permissions',
     'rest_framework',
     'oauth2_provider',
     'corsheaders',
@@ -134,6 +135,19 @@ AUTH_PASSWORD_VALIDATORS = [
         '.NumericPasswordValidator',
     },
 ]
+
+# OAuth2 Config
+# https://django-oauth-toolkit.readthedocs.io/en/latest/settings.html
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'read': 'Read scope',
+        'write': 'Write scope',
+    },
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 86400,
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 86400,
+    'CLIENT_ID_GENERATOR_CLASS': 'oauth2_provider.generators.ClientIdGenerator',
+
+}
 
 
 # Internationalization
